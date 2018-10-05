@@ -577,6 +577,18 @@ into the {body} of the default.hbs template -->
     </script>
     <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
     <script type="text/javascript" src="https://demo.ghost.io/assets/js/jquery.fitvids.js?v=724281a32e"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+
+    <script>
+      var tl = new TimelineLite();
+      tl
+        .add('end')
+        .to('#logo', 1, { opacity: 1 })
+        .staggerFrom("#brand .cls-1", 0.5, { opacity: 0, ease: Power2.easeInOut }, 0.2, 'end')
+        .to("#coffe", 1, { opacity: 0 }, 2, 'end')
+        .to("#code", 1, { opacity: 1 });
+
+    </script>
 
 
     <!-- Paginator increased to "infinit" in _config.yml -->
